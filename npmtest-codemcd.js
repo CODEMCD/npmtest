@@ -1,4 +1,4 @@
-function Queue() {
+module.exports = function Queue() {
     this.dataStore = [];
     this.enqueue = enqueue;
     this.dequeue = dequeue;
