@@ -1,6 +1,6 @@
 {
   "name": "npmtest-codemcd",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "npm publish test",
   "main": "npmtest-codemcd.js",
   "scripts": {
