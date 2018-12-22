@@ -1,0 +1,23 @@
+{
+  "name": "npmtest-codemcd",
+  "version": "1.0.0",
+  "description": "npm publish test",
+  "main": "index.js",
+  "scripts": {
+    "test": "node npmtest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CODEMCD/npmtest.git"
+  },
+  "keywords": [
+    "npm",
+    "publish"
+  ],
+  "author": "codemcd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CODEMCD/npmtest/issues"
+  },
+  "homepage": "https://github.com/CODEMCD/npmtest#readme"
+}
