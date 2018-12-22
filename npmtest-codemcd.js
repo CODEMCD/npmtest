@@ -1,31 +1,63 @@
-module.exports = function Queue() {
+// (function () {
+//     var q = function () {
+        
+//     };
+
+//     exports = module.exports = q;
+
+//     var enq = _enqueue(dataStore, element) {
+//         dataStore.push(element);
+//     };
+//     q.enqueue = function(dataStore, element) {
+//         _enqueue(dataStore, element);
+//     };
+// }());
+
+exports = module.exports = q;
+var q = function() {
     this.dataStore = [];
-    this.enqueue = enqueue;
-    this.dequeue = dequeue;
-    this.front = front;
-    this.back = back;
-    this.toString = toString;
-    this.empty = empty;
-    this.size = size;
+    this.enqueue = _enqueue;
+    this.dequeue = _dequeue;
+    this.front = _front;
+    this.back = _back;
+    this.toString = _toString;
+    this.empty = _empty;
+    this.size = _size;
 }
 
-function enqueue(element) {
+function _enqueue(element) {
     this.dataStore.push(element);
 }
 
-function dequeue() {
+q.enqueue = function(element) {
+    _enqueue(element);
+}
+
+function _dequeue() {
     return this.dataStore.shift();
 }
 
-function front() {
+q.dequeue = function() {
+    return _dequeue();
+}
+
+function _front() {
     return this.dataStore[0];
 }
 
-function back() {
+q.front = function() {
+    return _front();
+}
+
+function _back() {
     return this.dataStore[this.dataStore.length-1];
 }
 
-function toString() {
+q.back = function() {
+    return _back();
+}
+
+function _toString() {
     var retStr = "";
     for(var i = 0; i < this.dataStore.length; ++i) {
         retStr += this.dataStore[i] + "\n";
@@ -34,7 +66,11 @@ function toString() {
     return retStr;
 }
 
-function empty() {
+q.toString = function() {
+    return _toString();
+}
+
+function _empty() {
     if(this.dataStroe.length == 0) {
         return true;
     }
@@ -43,6 +79,14 @@ function empty() {
     }
 }
 
-function size() {
+q.empty = function() {
+    return _empty();
+}
+
+function _size() {
     return this.dataStore.length;
+}
+
+q.size = function() {
+    return _size();
 }
